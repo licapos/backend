@@ -1,0 +1,56 @@
+{
+    "kind": "collectionType",
+    "collectionName": "cities",
+    "info": {
+        "singularName": "city",
+        "pluralName": "cities",
+        "displayName": "City"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "Ad": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "Ulke": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "KisaBilgi": {
+            "type": "blocks",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "YolDurumu": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "places": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::place.place"
+        }
+    }
+}
