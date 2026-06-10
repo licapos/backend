@@ -4,7 +4,8 @@
   "info": {
     "singularName": "city",
     "pluralName": "cities",
-    "displayName": "City"
+    "displayName": "City",
+    "description": "Şehirler / Rotalar"
   },
   "options": {
     "draftAndPublish": true
@@ -32,7 +33,7 @@
       }
     },
     "KisaBilgi": {
-      "type": "blocks",
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -50,7 +51,8 @@
     "places": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::place.place"
+      "target": "api::place.place",
+      "mappedBy": "city"
     }
   }
 }

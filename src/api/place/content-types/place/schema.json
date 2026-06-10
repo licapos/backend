@@ -4,7 +4,8 @@
   "info": {
     "singularName": "place",
     "pluralName": "places",
-    "displayName": "Place"
+    "displayName": "Place",
+    "description": "Şehirlere bağlı mekânlar"
   },
   "options": {
     "draftAndPublish": true
@@ -24,7 +25,15 @@
       }
     },
     "Aciklama": {
-      "type": "blocks",
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "AciklamaEN": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -48,19 +57,14 @@
       },
       "multiple": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
-    "GuvenliPark": {
-      "type": "boolean",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "places"
     }
   }
 }
